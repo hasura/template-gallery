@@ -1,0 +1,62 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_onetoone",
+              "name": "owner"
+            },
+            "object_relationships": [
+              {
+                "name": "passport_info",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "owner_id",
+                    "table": {
+                      "schema": "_onetoone",
+                      "name": "passport_info"
+                    }
+                  }
+                }
+              }
+            ],
+            "array_relationships": [
+              {
+                "name": "passport_infos",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "owner_id",
+                    "table": {
+                      "schema": "_onetoone",
+                      "name": "passport_info"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_onetoone",
+              "name": "passport_info"
+            },
+            "object_relationships": [
+              {
+                "name": "owner",
+                "using": {
+                  "foreign_key_constraint_on": "owner_id"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

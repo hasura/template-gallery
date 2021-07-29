@@ -1,0 +1,7 @@
+{
+    "longDescription": "Views can be used to expose the results of a custom query as a virtual table. \n \nSometimes we might want to fetch some data derived by aggregating (avg, min, max, etc.) over a group of rows in a table. \n \nThis view will fetch the average article rating for each author across two tables.",
+    "imageUrl": "diagram.png",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/views.html#example-group-by-and-then-aggregate",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

@@ -1,0 +1,7 @@
+{
+    "longDescription": "Enum type fields are restricted to a fixed set of allowed values. \n \nUsing foreign-key references to a single-column table allows us to represents an enum using ordinary relational database concepts using Hasura. \n \nIn this example, to represent an enum we’re going to create an enum table, which for Hasura’s purposes is any table that meets the following restrictions: \n \n1. The table must have a single-column primary key of type text. The values of this column are the legal values of the enum, and they must all be valid GraphQL enum value names. \n2. Optionally, the table may have a second column, also of type text, which will be used as a description of each value in the generated GraphQL schema. \n3. The table must not contain any other columns. \n4. The table must contain at least 1 row. \n \nWe will then mark this table as an `Enum Table` within the GraphQL Engine.",
+    "imageUrl": "diagram.png",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/enums.html#enums-in-the-hasura-graphql-engine",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

@@ -1,0 +1,7 @@
+{
+    "longDescription": "A many-to-many relationship between two tables can be established by creating a table typically called a bridge/junction/join table and adding foreign-key constraints from it to the original tables. These are then tracked using Hasura. \n \nIn this example, we'll be creating tables for `article` and `tag`, and then a bridge table names `article_tag`. \n \nWe'll then be creating a view from these relationships which flattens the bridge table to give us a unified view of the relationship without using a nested GraphQL request.",
+    "imageUrl": "diagram.png",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/guides/data-modelling/many-to-many.html#flattening-a-many-to-many-relationship-query",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

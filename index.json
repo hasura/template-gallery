@@ -1,0 +1,152 @@
+{
+    "pg-hello-world": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Hello World",
+        "description": "A sample template to get started with your first Hasura API.",
+        "category": "Getting Started",
+        "relativeFolderPath": "/postgres/getting-started"
+    },
+    "mssql-hello-world": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "mssql",
+        "title": "Hello World",
+        "description": "A sample template to get started with your first Hasura API.",
+        "category": "Getting Started",
+        "relativeFolderPath": "/mssql/getting-started"
+    },
+    "pg-views-groupby-aggregate": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Views: Group By & Aggregate",
+        "description": "Grouping by a set of columns and aggregating a score.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/views-group-aggregate"
+    },
+    "pg-enum-reference-table": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Enum: Reference Table",
+        "description": "Defining restricted enum values using references to a single-column table.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/enum-reference-table"
+    },
+    "pg-relationships-one-to-one": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Relationships: One-to-One",
+        "description": "Creating a one-to-one relationship between tables using Hasura.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/relationships-one-to-one"
+    },
+    "pg-relationships-one-to-many": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Relationships: One-to-Many",
+        "description": "Creating a one-to-many relationship between tables using Hasura.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/relationships-one-to-many"
+    },
+    "pg-relationships-many-to-many": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Relationships: Many-to-Many",
+        "description": "Creating a many-to-many relationship between tables using Hasura.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/relationships-many-to-many"
+    },
+    "pg-relationships-flatten-many": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Relationships: Flatten Many-to-Many",
+        "description": "A demonstration of flattening many-to-many relationships to remove the standard intermediate table.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/relationships-flatten-many"
+    },
+    "pg-permissions-row-level-basic": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Permissions: Row-Level (Basic)",
+        "description": "Row-level permissions which can be set based on a user's role or any session variables.",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/permissions-row-level-basic"
+    },
+    "pg-permissions-column-level": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Permissions: Column-Level Filtering",
+        "description": "Column-level permissions which can determine access to columns that are accessible by the user's role",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/permissions-column-level"
+    },
+    "pg-permissions-extensible-attributes": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Permissions: Extensibile Attribute Permissions",
+        "description": "Using the `exists` operator to create permissions from a user attribute table, as well as extensible attributes using JSONB. ",
+        "category": "Core Concepts",
+        "relativeFolderPath": "/postgres/permissions-extensible-attributes-jsonb"
+    },
+    "pg-functions-fuzzy-match": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Functions: Fuzzy-Match Search",
+        "description": "An example of a fuzzy-match search function across multiple columns.",
+        "category": "Intermediate Implementations",
+        "relativeFolderPath": "/postgres/functions-fuzzy-match-search"
+    },
+    "pg-functions-session-variables": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Functions: Accessing Session Variables",
+        "description": "Creating a function with an argument for session variables and tracking it using your Hasura API.",
+        "category": "Intermediate Implementations",
+        "relativeFolderPath": "/postgres/functions-session-variables"
+    },
+    "pg-functions-trigger-validation": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Functions: Data Validation with Triggers",
+        "description": "Creating a function to check new users against a blacklist on new user creation using a function and a trigger.",
+        "category": "Intermediate Implementations",
+        "relativeFolderPath": "/postgres/functions-trigger-validation"
+    },
+    "pg-functions-constraint-validation": {
+        "template_version": "1",
+        "metadata_version": "3",
+        "type": "database",
+        "dialect": "postgres",
+        "title": "Functions: Input Validation with Constraints",
+        "description": "Creating constraints on our table to validate incoming data entry - in this case, that the discounted price is less than the retail price.",
+        "category": "Intermediate Implementations",
+        "relativeFolderPath": "/postgres/functions-constraint-validation"
+    }
+}

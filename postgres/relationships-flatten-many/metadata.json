@@ -1,0 +1,86 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_flattenmany",
+              "name": "article"
+            },
+            "array_relationships": [
+              {
+                "name": "article_tags",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "article_id",
+                    "table": {
+                      "schema": "_flattenmany",
+                      "name": "article_tag"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_flattenmany",
+              "name": "article_tag"
+            },
+            "object_relationships": [
+              {
+                "name": "article",
+                "using": {
+                  "foreign_key_constraint_on": "article_id"
+                }
+              },
+              {
+                "name": "tag",
+                "using": {
+                  "foreign_key_constraint_on": "tag_id"
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_flattenmany",
+              "name": "article_tags_view"
+            }
+          },
+          {
+            "table": {
+              "schema": "_flattenmany",
+              "name": "tag"
+            },
+            "array_relationships": [
+              {
+                "name": "article_tags",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "tag_id",
+                    "table": {
+                      "schema": "_flattenmany",
+                      "name": "article_tag"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_flattenmany",
+              "name": "tag_articles_view"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

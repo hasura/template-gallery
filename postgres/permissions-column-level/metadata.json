@@ -1,0 +1,186 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_colpermissions",
+              "name": "article"
+            },
+            "object_relationships": [
+              {
+                "name": "author",
+                "using": {
+                  "foreign_key_constraint_on": "author_id"
+                }
+              }
+            ],
+            "insert_permissions": [
+              {
+                "role": "author",
+                "permission": {
+                  "check": {
+                    "author_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  },
+                  "set": {
+                    "author_id": "x-hasura-User-Id"
+                  },
+                  "columns": [
+                    "id",
+                    "title"
+                  ],
+                  "backend_only": false
+                }
+              },
+              {
+                "role": "editor",
+                "permission": {
+                  "check": {},
+                  "set": {
+                    "author_id": "x-hasura-User-Id"
+                  },
+                  "columns": [
+                    "author_id",
+                    "id",
+                    "editor_notes",
+                    "title"
+                  ],
+                  "backend_only": false
+                }
+              }
+            ],
+            "select_permissions": [
+              {
+                "role": "author",
+                "permission": {
+                  "columns": [
+                    "author_id",
+                    "id",
+                    "title"
+                  ],
+                  "filter": {
+                    "author_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              },
+              {
+                "role": "editor",
+                "permission": {
+                  "columns": [
+                    "author_id",
+                    "id",
+                    "editor_notes",
+                    "title"
+                  ],
+                  "filter": {}
+                }
+              }
+            ],
+            "update_permissions": [
+              {
+                "role": "author",
+                "permission": {
+                  "columns": [
+                    "author_id",
+                    "id",
+                    "title"
+                  ],
+                  "filter": {
+                    "author_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  },
+                  "check": null
+                }
+              },
+              {
+                "role": "editor",
+                "permission": {
+                  "columns": [
+                    "author_id",
+                    "id",
+                    "editor_notes",
+                    "title"
+                  ],
+                  "filter": {},
+                  "check": {}
+                }
+              }
+            ],
+            "delete_permissions": [
+              {
+                "role": "author",
+                "permission": {
+                  "filter": {
+                    "author_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              },
+              {
+                "role": "editor",
+                "permission": {
+                  "filter": {}
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_colpermissions",
+              "name": "author"
+            },
+            "array_relationships": [
+              {
+                "name": "articles",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "author_id",
+                    "table": {
+                      "schema": "_colpermissions",
+                      "name": "article"
+                    }
+                  }
+                }
+              }
+            ],
+            "select_permissions": [
+              {
+                "role": "author",
+                "permission": {
+                  "columns": [
+                    "id",
+                    "name",
+                    "role"
+                  ],
+                  "filter": {}
+                }
+              },
+              {
+                "role": "editor",
+                "permission": {
+                  "columns": [
+                    "id",
+                    "name",
+                    "role"
+                  ],
+                  "filter": {}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

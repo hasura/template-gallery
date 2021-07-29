@@ -1,0 +1,7 @@
+{
+    "longDescription": "A relationship from one table/view to another can be created by defining a link between a column of the table/view to a column of the other table/view. \n\nA one-to-one relationship between two tables can be established via a unique foreign key constraint and tracked using Hasura. \n\nIn this example, we'll be creating tables for `owner` and `passport` \n\nThese two tables are related via a one-to-one relationship. i.e.: \n\n- an `owner` can have one `passport_info` \n- a `passport_info` has one `owner`",
+    "imageUrl": "diagram.png",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/guides/data-modelling/one-to-one.html",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

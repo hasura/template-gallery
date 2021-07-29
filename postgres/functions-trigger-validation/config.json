@@ -1,0 +1,5 @@
+{
+    "longDescription": "Triggers are a great way to validate data before or after the data has been added to your database. \n\nIn this example, we'll be creating a user blacklist which will work with a trigger and a function to make sure no users are added to the user table who have their emails added to the blacklist table. \n\n**Tip:** Try creating a user with `tommy.badguy@email.com` - you'll notice the user is forbidden.",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

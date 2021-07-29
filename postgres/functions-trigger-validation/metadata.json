@@ -1,0 +1,26 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_triggers",
+              "name": "user"
+            }
+          },
+          {
+            "table": {
+              "schema": "_triggers",
+              "name": "user_blacklist"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

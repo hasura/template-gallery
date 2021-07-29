@@ -1,0 +1,54 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_groupagg",
+              "name": "article"
+            },
+            "object_relationships": [
+              {
+                "name": "author",
+                "using": {
+                  "foreign_key_constraint_on": "author_id"
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_groupagg",
+              "name": "author"
+            },
+            "array_relationships": [
+              {
+                "name": "articles",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "author_id",
+                    "table": {
+                      "schema": "_groupagg",
+                      "name": "article"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_groupagg",
+              "name": "author_average_rating"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

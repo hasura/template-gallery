@@ -1,0 +1,28 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_multicolumn",
+              "name": "directory"
+            }
+          }
+        ],
+        "functions": [
+          {
+            "function": {
+              "schema": "_multicolumn",
+              "name": "search_directory"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

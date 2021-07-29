@@ -1,0 +1,6 @@
+{
+    "longDescription": "Custom functions are ideal solutions for retrieving some derived data based on some custom business logic that requires user input to be calculated. This is an example of a fuzzy-match search function across multiple columns. \n \nThis example will look at a street address text search with support for misspelled queries.",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#example-fuzzy-match-search-functions",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

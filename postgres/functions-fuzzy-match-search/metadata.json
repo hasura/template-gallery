@@ -1,0 +1,28 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_fuzzysearch",
+              "name": "directory"
+            }
+          }
+        ],
+        "functions": [
+          {
+            "function": {
+              "schema": "_fuzzysearch",
+              "name": "search"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

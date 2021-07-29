@@ -1,0 +1,31 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_sessionvar",
+              "name": "text_result"
+            }
+          }
+        ],
+        "functions": [
+          {
+            "function": {
+              "schema": "_sessionvar",
+              "name": "get_session_variable"
+            },
+            "configuration": {
+              "session_argument": "hasura_session"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

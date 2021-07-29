@@ -1,0 +1,7 @@
+{
+    "longDescription": "A one-to-many relationship between two tables can be established via a foreign key constraint and tracked using Hasura. \n \nIn this example, we'll be creating tables for `author` and `passport` \n \nThese two tables are related via a one-to-many relationship. i.e: \n \n- an `author` can have many `articles` \n- an `article` has one `author`",
+    "imageUrl": "diagram.png",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/guides/data-modelling/one-to-many.html",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

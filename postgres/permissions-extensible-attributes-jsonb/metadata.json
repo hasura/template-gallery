@@ -1,0 +1,288 @@
+{
+  "resource_version": 1,
+  "metadata": {
+    "version": 3,
+    "sources": [
+      {
+        "name": "default",
+        "kind": "postgres",
+        "tables": [
+          {
+            "table": {
+              "schema": "_attributes",
+              "name": "chat"
+            },
+            "object_relationships": [
+              {
+                "name": "user",
+                "using": {
+                  "foreign_key_constraint_on": "receiver_id"
+                }
+              },
+              {
+                "name": "userBySenderId",
+                "using": {
+                  "foreign_key_constraint_on": "sender_id"
+                }
+              }
+            ],
+            "insert_permissions": [
+              {
+                "role": "user",
+                "permission": {
+                  "check": {
+                    "_or": [
+                      {
+                        "sender_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "receiver_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "_exists": {
+                          "_where": {
+                            "_and": [
+                              {
+                                "sender_id": {
+                                  "_eq": "X-Hasura-User-Id"
+                                }
+                              },
+                              {
+                                "attribute": {
+                                  "_contains": {
+                                    "is_moderator": "true"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "_table": {
+                            "schema": "_attributes",
+                            "name": "user_attributes"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "columns": [
+                    "id",
+                    "created_at",
+                    "message",
+                    "sender_id",
+                    "receiver_id"
+                  ],
+                  "backend_only": false
+                }
+              }
+            ],
+            "select_permissions": [
+              {
+                "role": "user",
+                "permission": {
+                  "columns": [
+                    "id",
+                    "created_at",
+                    "message",
+                    "sender_id",
+                    "receiver_id"
+                  ],
+                  "filter": {
+                    "_or": [
+                      {
+                        "sender_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "receiver_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "_exists": {
+                          "_where": {
+                            "_and": [
+                              {
+                                "sender_id": {
+                                  "_eq": "X-Hasura-User-Id"
+                                }
+                              },
+                              {
+                                "attribute": {
+                                  "_contains": {
+                                    "is_moderator": "true"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "_table": {
+                            "schema": "_attributes",
+                            "name": "user_attributes"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "update_permissions": [
+              {
+                "role": "user",
+                "permission": {
+                  "columns": [
+                    "id",
+                    "receiver_id",
+                    "sender_id",
+                    "message",
+                    "created_at"
+                  ],
+                  "filter": {
+                    "_or": [
+                      {
+                        "sender_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "receiver_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "_exists": {
+                          "_where": {
+                            "_and": [
+                              {
+                                "sender_id": {
+                                  "_eq": "X-Hasura-User-Id"
+                                }
+                              },
+                              {
+                                "attribute": {
+                                  "_contains": {
+                                    "is_moderator": "true"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "_table": {
+                            "schema": "_attributes",
+                            "name": "user_attributes"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "check": {
+                    "_or": [
+                      {
+                        "sender_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "receiver_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "delete_permissions": [
+              {
+                "role": "user",
+                "permission": {
+                  "filter": {
+                    "_or": [
+                      {
+                        "sender_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "receiver_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      },
+                      {
+                        "_exists": {
+                          "_where": {
+                            "_and": [
+                              {
+                                "sender_id": {
+                                  "_eq": "X-Hasura-User-Id"
+                                }
+                              },
+                              {
+                                "attribute": {
+                                  "_contains": {
+                                    "is_moderator": "true"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "_table": {
+                            "schema": "_attributes",
+                            "name": "user_attributes"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_attributes",
+              "name": "user"
+            },
+            "array_relationships": [
+              {
+                "name": "chats",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "receiver_id",
+                    "table": {
+                      "schema": "_attributes",
+                      "name": "chat"
+                    }
+                  }
+                }
+              },
+              {
+                "name": "chatsBySenderId",
+                "using": {
+                  "foreign_key_constraint_on": {
+                    "column": "sender_id",
+                    "table": {
+                      "schema": "_attributes",
+                      "name": "chat"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "table": {
+              "schema": "_attributes",
+              "name": "user_attributes"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

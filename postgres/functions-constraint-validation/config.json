@@ -1,0 +1,6 @@
+{
+    "longDescription": "Constraints are a great way to validate that the data being added to your database fits a specific format, or some specific business logic. \n\nIn this example, we'll be looking at a simple retail schema, where we are validating the price fields, and the business logic that the discounted price is less than the retail price of the item.",
+    "blogPostLink": "https://www.postgresql.org/docs/9.4/ddl-constraints.html",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}

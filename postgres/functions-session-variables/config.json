@@ -1,0 +1,6 @@
+{
+    "longDescription": "Create a function with an argument for session variables and track it using your Hasura API. \n \nThis example will look at creating a function to access your current user's ID from a custom function to demonstrate how to access your current session's variables.",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#accessing-hasura-session-variables-in-custom-functions",
+    "sqlFiles": ["migration.sql" ],
+    "metadataUrl": "metadata.json"
+}
