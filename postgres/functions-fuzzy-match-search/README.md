@@ -7,5 +7,5 @@ This example will look at a street address text search with support for misspell
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/functions-fuzzy-match-search
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/functions-fuzzy-match-search
 - The schema sharing source code was derived from the following tutorial: https://www.postgresql.org/docs/9.4/ddl-constraints.html

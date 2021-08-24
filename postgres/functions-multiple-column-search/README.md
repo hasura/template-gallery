@@ -7,5 +7,5 @@ In this schema example, we'll be creating a text search function which executes 
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/functions-multiple-column-search
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/functions-multiple-column-search
 - The schema sharing source code was derived from the following tutorial: https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/custom-functions.html#example-text-search-functions

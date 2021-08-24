@@ -11,10 +11,10 @@ These two tables are related via a one-to-one relationship. i.e.:
 - an `owner` can have one `passport_info`
 - a `passport_info` has one `owner` 
 
-![ERD Diagram](https://hasura.github.io/schema-sharing/postgres/relationships-one-to-one/diagram.png)
+![ERD Diagram](https://hasura.github.io/template-gallery/postgres/relationships-one-to-one/diagram.png)
 
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/relationships-one-to-one
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/relationships-one-to-one
 - The schema sharing source code was derived from the following tutorial: https://hasura.io/docs/latest/graphql/core/guides/data-modelling/one-to-one.html

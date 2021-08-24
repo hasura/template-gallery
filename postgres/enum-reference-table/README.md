@@ -16,5 +16,5 @@ We will then mark this table as an `Enum Table` within the GraphQL Engine.
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/enum-reference-table
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/enum-reference-table
 - The schema sharing source code was derived from the following tutorial: https://hasura.io/docs/latest/graphql/core/databases/postgres/schema/enums.html#enums-in-the-hasura-graphql-engine
