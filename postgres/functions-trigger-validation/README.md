@@ -9,4 +9,4 @@ In this example, we'll be creating a user blacklist which will work with a trigg
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/functions-trigger-validation
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/functions-trigger-validation

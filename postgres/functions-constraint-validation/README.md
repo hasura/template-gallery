@@ -7,5 +7,5 @@ In this example, we'll be looking at a simple retail schema, where we are valida
 -----
 
 - This schema is installable through your **Hasura Console**
-- The schema sharing source code is available: https://github.com/hasura/schema-sharing/tree/main/postgres/functions-constraint-validation
+- The schema sharing source code is available: https://github.com/hasura/template-gallery/tree/main/postgres/functions-constraint-validation
 - The schema sharing source code was derived from the knowledge base: https://www.postgresql.org/docs/9.4/ddl-constraints.html
