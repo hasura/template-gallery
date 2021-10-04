@@ -4,7 +4,7 @@ This is an example template to help you get started with Hasura. It's a sample o
 
 A one-to-many relationship between two tables can be established via a foreign key constraint and tracked using Hasura.
 
-In this example, we'll be creating tables for `author` and `passport`
+In this example, we'll be creating tables for `author` and `articles`
 
 These two tables are related via a one-to-many relationship. i.e:
 
