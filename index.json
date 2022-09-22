@@ -4,8 +4,8 @@
         "metadata_version": "3",
         "type": "database",
         "dialect": "postgres",
-        "title": "Hello World",
-        "description": "A sample template to get started with your first Hasura API.",
+        "title": "👋 Welcome to Hasura!",
+        "description": "Get started learning Hasura with an example.",
         "category": "Getting Started",
         "relativeFolderPath": "/postgres/getting-started"
     },
