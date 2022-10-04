@@ -7,14 +7,14 @@
 -- Table Definition
 CREATE TABLE "public"."Album" (
     "AlbumId" int4 NOT NULL,
-    "Title" varchar(160) NOT NULL,
+    "Title" text NOT NULL,
     "ArtistId" int4 NOT NULL,
     PRIMARY KEY ("AlbumId")
 );
 
 CREATE TABLE "public"."Artist" (
     "ArtistId" int4 NOT NULL,
-    "Name" varchar(120),
+    "Name" text,
     PRIMARY KEY ("ArtistId")
 );
 
