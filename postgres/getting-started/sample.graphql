@@ -1,55 +1,18 @@
-# Lookup all artists, album, and tracks based on foreign key relationships
-# Limit to 100 artist records
-query lookupEverything {
-  sample_Artist(limit: 100) {
+#
+#  An example query:
+#  Lookup all artists and their albums based on a foreign key relationship.
+#  ┌───────┐     ┌────────┐
+#  │ Album │---->│ Artist │
+#  └───────┘     └────────┘
+#
+
+query lookupArtistAlbum {
+  Artist{
     ArtistId
     Name
     Albums {
       AlbumId
       Title
-      Tracks {
-        TrackId
-        Name
-      }
     }
-  }
-}
-
-# Lookup artist info, albums, tracks based on foreign key relationships
-# Filter for only `ArtistId` with the ID of `22` (Led Zeppelin)
-query lookupArtist {
-  sample_Artist(where: {ArtistId: {_eq: 22}}) {
-    ArtistId
-    Name
-    Albums {
-      AlbumId
-      Title
-      Tracks {
-        TrackId
-        Name
-      }
-    }
-  }
-}
-
-# We've flattened the relationship into a materialized view
-# Filter on `ArtistName` as well as the `AlbumTitle` from the view
-query lookupFlatRecord {
-  sample_TrackDetailView(where: {ArtistName: {_eq: "Led Zeppelin"}, AlbumTitle: {_eq: "Led Zeppelin I"}}) {
-    TrackName
-    GenreName
-    ArtistName
-    AlbumTitle
-  }
-}
-
-# From the flattened table we've created a fuzzy-search function which will search the table using `pg_trgm`
-# This query should return results for 'Led Zeppelin'
-query lookupFuzzySearch {
-  sample_TrackSearch(args: {search: "Ted Zeppelin"}) {
-    TrackName
-    GenreName
-    ArtistName
-    AlbumTitle
   }
 }

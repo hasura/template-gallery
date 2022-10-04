@@ -1,5 +1,5 @@
 {
-  "resource_version": 1,
+  "resource_version": 5,
   "metadata": {
     "version": 3,
     "sources": [
@@ -10,7 +10,7 @@
           {
             "table": {
               "name": "Album",
-              "schema": "sample"
+              "schema": "public"
             },
             "object_relationships": [
               {
@@ -19,26 +19,12 @@
                   "foreign_key_constraint_on": "ArtistId"
                 }
               }
-            ],
-            "array_relationships": [
-              {
-                "name": "Tracks",
-                "using": {
-                  "foreign_key_constraint_on": {
-                    "column": "AlbumId",
-                    "table": {
-                      "name": "Track",
-                      "schema": "sample"
-                    }
-                  }
-                }
-              }
             ]
           },
           {
             "table": {
               "name": "Artist",
-              "schema": "sample"
+              "schema": "public"
             },
             "array_relationships": [
               {
@@ -48,66 +34,12 @@
                     "column": "ArtistId",
                     "table": {
                       "name": "Album",
-                      "schema": "sample"
+                      "schema": "public"
                     }
                   }
                 }
               }
             ]
-          },
-          {
-            "table": {
-              "name": "Genre",
-              "schema": "sample"
-            },
-            "array_relationships": [
-              {
-                "name": "Tracks",
-                "using": {
-                  "foreign_key_constraint_on": {
-                    "column": "GenreId",
-                    "table": {
-                      "name": "Track",
-                      "schema": "sample"
-                    }
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "table": {
-              "name": "Track",
-              "schema": "sample"
-            },
-            "object_relationships": [
-              {
-                "name": "Album",
-                "using": {
-                  "foreign_key_constraint_on": "AlbumId"
-                }
-              },
-              {
-                "name": "Genre",
-                "using": {
-                  "foreign_key_constraint_on": "GenreId"
-                }
-              }
-            ]
-          },
-          {
-            "table": {
-              "name": "TrackDetailView",
-              "schema": "sample"
-            }
-          }
-        ],
-        "functions": [
-          {
-            "function": {
-              "name": "TrackSearch",
-              "schema": "sample"
-            }
           }
         ]
       }
