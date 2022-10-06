@@ -1,18 +1,25 @@
 #
 #  An example query:
-#  Lookup all artists and their albums based on a foreign key relationship.
-#  ┌───────┐     ┌────────┐
-#  │ Album │---->│ Artist │
-#  └───────┘     └────────┘
+#  Lookup all customers and their orders based on a foreign key relationship.
+#  ┌──────────┐     ┌───────┐
+#  │ customer │---->│ order │
+#  └──────────┘     └───────┘
 #
 
-query lookupArtistAlbum {
-  Artist{
-    ArtistId
-    Name
-    Albums {
-      AlbumId
-      Title
+query lookupCustomerOrder {
+  customer {
+    id
+    first_name
+    last_name
+    username
+    email
+    phone
+    orders {
+      id
+      order_date
+      product
+      purchase_price
+      discount_price
     }
   }
 }
