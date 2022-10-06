@@ -34,7 +34,7 @@ INSERT INTO "public"."customer" ("id", "first_name", "last_name", "email", "phon
 (9, 'Maximilien', 'Longbothom', 'mlongbothom8@yahoo.co.jp', '+33 (279) 317-1163', 'mlongbothom8', '5.68.95.19'),
 (10, 'Garold', 'Pendock', 'gpendock9@foxnews.com', '+27 (948) 957-1398', 'gpendock9', '153.194.87.243');
 
-INSERT INTO "public"."order" ("id", "transaction_id", "Product", "purchase_price", "discount_price", "order_date", "customer_id") VALUES
+INSERT INTO "public"."order" ("id", "transaction_id", "product", "purchase_price", "discount_price", "order_date", "customer_id") VALUES
 (1, '1F3ZLKrcXyisvMa79GdQ3UCKcUpHprzkjX', 'Juice - Cranberry, 341 Ml', '$6.26 ', '$1.46 ', '10/19/2021', 7),
 (2, '16WKVa7pV9xAUPC12ymbdFSA1TqLtfitSA', 'Pasta - Canelloni', '$4.74 ', '$1.82 ', '03/25/2022', 8),
 (3, '19TbQiD2ijcDZCY9d3V8pxfj8U4punJxCo', 'Bread - Calabrese Baguette', '$9.83 ', '$0.45 ', '07/07/2022', 1),
