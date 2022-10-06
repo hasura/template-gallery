@@ -1,5 +1,5 @@
 {
-  "resource_version": 5,
+  "resource_version": 12,
   "metadata": {
     "version": 3,
     "sources": [
@@ -9,34 +9,34 @@
         "tables": [
           {
             "table": {
-              "name": "Album",
+              "name": "customer",
               "schema": "public"
             },
-            "object_relationships": [
+            "array_relationships": [
               {
-                "name": "Artist",
+                "name": "orders",
                 "using": {
-                  "foreign_key_constraint_on": "ArtistId"
+                  "foreign_key_constraint_on": {
+                    "column": "customer_id",
+                    "table": {
+                      "name": "order",
+                      "schema": "public"
+                    }
+                  }
                 }
               }
             ]
           },
           {
             "table": {
-              "name": "Artist",
+              "name": "order",
               "schema": "public"
             },
-            "array_relationships": [
+            "object_relationships": [
               {
-                "name": "Albums",
+                "name": "customer",
                 "using": {
-                  "foreign_key_constraint_on": {
-                    "column": "ArtistId",
-                    "table": {
-                      "name": "Album",
-                      "schema": "public"
-                    }
-                  }
+                  "foreign_key_constraint_on": "customer_id"
                 }
               }
             ]
