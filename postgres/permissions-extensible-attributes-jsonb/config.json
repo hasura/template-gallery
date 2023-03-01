@@ -1,7 +1,7 @@
 {
     "longDescription": "Attribute-based permissions are a powerful way to be able to be able to model user permissions. \n\nIn this example, we'll be creating a granting a user special moderator permissions (ability to see and edit all chats) based on an JSONB entry found in a `user_attributes` table. \n\n**Note:** To test this user role, try entering a `x-hasura-user-id` entry when using your GraphiQL editor in the API tab.",
     "imageUrl": "diagram.png",
-    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/auth/authorization",
+    "blogPostLink": "https://hasura.io/docs/latest/graphql/core/auth/authorization/index.html",
     "sqlFiles": ["migration.sql"],
     "metadataUrl": "metadata.json"
 }
