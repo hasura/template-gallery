@@ -104,7 +104,7 @@
         "metadata_version": "3",
         "type": "database",
         "dialect": "postgres",
-        "title": "Permissions: Extensibile Attribute Permissions",
+        "title": "Permissions: Extensible Attribute Permissions",
         "description": "Using the `exists` operator to create permissions from a user attribute table, as well as extensible attributes using JSONB. ",
         "category": "Core Concepts",
         "relativeFolderPath": "/postgres/permissions-extensible-attributes-jsonb"
